@@ -4,7 +4,7 @@ A student-focused career growth dashboard that helps learners track coding progr
 
 ## Screenshot
 
-![Code2Career dashboard screenshot](docs/project-screenshot.svg)
+![Code2Career dashboard screenshot](docs/Screenshot 2026-09-20 192156.png)
 
 ## Overview
 
