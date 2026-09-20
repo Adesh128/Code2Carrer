@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code2Career | Student Progress</title>
+  <link rel="stylesheet" href="base.css?v=20260920y">
+  <link rel="stylesheet" href="product.css?v=20260920y">
+  <link rel="stylesheet" href="style.css?v=20260920y">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">C2</span><span>Code2Career</span></div>
+      <p class="eyebrow">STUDENT WORKSPACE</p>
+      <nav>
+        <button class="nav-item active" id="overview-nav">⌂ <span>Overview</span></button>
+        <button class="nav-item" id="applications-nav">◈ <span>Applications</span></button>
+        <button class="nav-item" id="skills-nav">◒ <span>Skills & progress</span></button>
+        <button class="nav-item" id="jobs-nav">▣ <span>Job recommendations</span></button>
+        <button class="nav-item" id="resume-nav">▱ <span>Resume</span></button>
+        <button class="nav-item" id="settings-nav">⚙ <span>Settings</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="avatar">AM</div>
+        <div><strong>Student Dashboard</strong><small>Student account</small></div>
+        <button id="logout" title="Log out">↗</button>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SUNDAY, SEPTEMBER 20, 2026</p>
+          <h1>Good morning, Student <span>✦</span></h1>
+          <p class="muted">Here’s your progress at a glance.</p>
+        </div>
+        <div class="top-actions"><button class="icon-button" id="search-button" title="Search">⌕</button><button class="icon-button" id="theme-toggle" title="Toggle dark mode">☾</button></div>
+      </header>
+      <section class="stats" id="stats">
+        <article class="stat-card"><span class="stat-icon purple">◔</span><div><p>Profile completion</p><strong id="profile">--%</strong><small class="positive">↑ 8% this month</small></div></article>
+        <article class="stat-card"><span class="stat-icon blue">✧</span><div><p>Resume ATS score</p><strong id="ats">--</strong><small class="positive">↑ 12 points</small></div></article>
+        <article class="stat-card"><span class="stat-icon orange">⌁</span><div><p>Applications</p><strong id="applications">--</strong><small class="muted">0 deadlines soon</small></div></article>
+        <article class="stat-card"><span class="stat-icon green">◉</span><div><p>Current streak</p><strong id="streak">-- days</strong><small class="positive">Keep it going!</small></div></article>
+      </section>
+      <section class="panel product-panel">
+        <div class="panel-heading"><div><h2>Code2Career command center</h2><p class="muted">One place to turn daily coding into career progress.</p></div><span class="integration-status">MVP READY</span></div>
+        <div class="product-grid">
+          <article class="product-card"><span class="product-icon github-icon"><svg viewBox="0 0 24 24" aria-label="GitHub logo"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.93.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.55 9.55 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></span><div><strong>GitHub</strong><small id="github-summary">124 commits · 12 repositories</small></div><span class="connected">Connected</span></article>
+          <article class="product-card"><span class="product-icon leetcode-icon"><svg viewBox="0 0 24 24" aria-label="LeetCode logo"><path d="M13.5 3.2 7.1 9.6a4.6 4.6 0 0 0 0 6.5l2.8 2.8a4.6 4.6 0 0 0 6.5 0l3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m12 8 8 8M4 20h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><div><strong>LeetCode</strong><small id="leetcode-summary">146 solved · 18 day streak</small></div><span class="connected">Tracked</span></article>
+          <article class="product-card"><span class="product-icon codeforces-icon"><svg viewBox="0 0 24 24" aria-label="Codeforces logo"><path d="M4 14h3v6H4zM10.5 9h3v11h-3zM17 4h3v16h-3z" fill="currentColor"/></svg></span><div><strong>Codeforces</strong><small id="codeforces-summary">1,248 rating · 286 solved</small></div><span class="connected">Tracked</span></article>
+          <article class="product-card"><span class="product-icon resume-icon">CV</span><div><strong>ATS resume score</strong><small id="resume-summary">88 / 100 · 3 improvement tips</small></div><button class="mini-action" id="resume-action" type="button" onclick="window.openResumeReview()">Review</button></article>
+          <article class="product-card"><span class="product-icon jobs-icon">JOB</span><div><strong>Job recommendations</strong><small id="jobs-summary">8 internships from Unstop & Internshala</small></div><button class="mini-action" id="jobs-action">Explore</button></article>
+          <article class="product-card"><span class="product-icon whatsapp-icon">WA</span><div><strong>WhatsApp coach</strong><small id="reminder-summary">Reminder at 9:00 PM if no problem is solved</small></div><button class="mini-action" id="reminder-action">Configure</button></article>
+        </div>
+      </section>
+      <section class="panel coding-overview">
+        <div class="panel-heading"><div><h2>Coding overview</h2><p class="muted">Live solved questions, activity, and current streaks</p></div><span class="integration-status">LIVE SYNC</span></div>
+        <div class="coding-grid">
+          <article class="coding-card"><span class="product-icon leetcode-icon"><svg viewBox="0 0 24 24" aria-label="LeetCode logo"><path d="M13.5 3.2 7.1 9.6a4.6 4.6 0 0 0 0 6.5l2.8 2.8a4.6 4.6 0 0 0 6.5 0l3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m12 8 8 8M4 20h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><div><strong>LeetCode</strong><p id="leetcode-detail">Connect your profile to load solved questions.</p><div class="coding-metrics"><b id="leetcode-solved">--</b><span>Questions solved</span><b id="leetcode-streak">--</b><span>Current streak</span></div></div></article>
+          <article class="coding-card"><span class="product-icon github-icon"><svg viewBox="0 0 24 24" aria-label="GitHub logo"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.93.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.55 9.55 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></span><div><strong>GitHub</strong><p id="github-detail">Connect your profile to load activity.</p><div class="coding-metrics"><b id="github-repositories">--</b><span>Repositories</span><b id="github-streak">--</b><span>Current streak</span></div></div></article>
+          <article class="coding-card"><span class="product-icon codeforces-icon"><svg viewBox="0 0 24 24" aria-label="Codeforces logo"><path d="M4 14h3v6H4zM10.5 9h3v11h-3zM17 4h3v16h-3z" fill="currentColor"/></svg></span><div><strong>Codeforces</strong><p id="codeforces-detail">Connect your profile to load solved problems.</p><div class="coding-metrics"><b id="codeforces-solved">--</b><span>Questions solved</span><b id="codeforces-streak">--</b><span>Current streak</span></div></div></article>
+        </div>
+      </section>
+      <section class="grid">
+        <article class="panel chart-panel">
+          <div class="panel-heading"><div><h2>Weekly coding activity</h2><p class="muted">Your activity across platforms</p></div><div class="activity-controls"><button class="activity-filter active" data-source="all">All</button><button class="activity-filter" data-source="leetcode">LeetCode</button><button class="activity-filter" data-source="codeforces">Codeforces</button><button class="select" id="period-select">This week⌄</button></div></div>
+          <div class="chart" id="activity-chart"></div>
+        </article>
+        <article class="panel progress-panel">
+          <div class="panel-heading"><div><h2>Career readiness</h2><p class="muted">You're making great progress</p></div><span class="score">82%</span></div>
+          <div class="ring"><div><strong>82</strong><small>/ 100</small></div></div>
+          <div class="readiness"><span><i class="dot green-dot"></i>Profile</span><b>Complete</b><span><i class="dot blue-dot"></i>Resume</span><b>88 / 100</b><span><i class="dot purple-dot"></i>Skills</span><b>76%</b></div>
+        </article>
+      </section>
+      <section class="panel skills-view hidden" id="skills-view">
+        <div class="panel-heading"><div><h2>Skills & progress</h2><p class="muted">Track your technical growth across platforms</p></div><button class="select" id="back-overview">← Overview</button></div>
+        <form class="profile-links" id="profile-links-form">
+          <div><h3>Connect your coding profiles</h3><p class="muted">Paste your public profile links to personalize your progress.</p></div>
+          <label>GitHub<input id="github-link" name="github" type="url" placeholder="https://github.com/username"><button class="profile-save" type="button" data-profile="github">Save GitHub</button></label>
+          <label>LeetCode<input id="leetcode-link" name="leetcode" type="url" placeholder="https://leetcode.com/u/username"><button class="profile-save" type="button" data-profile="leetcode">Save LeetCode</button></label>
+          <label>Codeforces<input id="codeforces-link" name="codeforces" type="url" placeholder="https://codeforces.com/profile/username"><button class="profile-save" type="button" data-profile="codeforces">Save Codeforces</button></label>
+          <p class="profile-links-status muted" id="profile-links-status" role="status"></p>
+        </form>
+        <div class="skill-cards">
+          <article class="skill-card"><span class="skill-badge purple"><svg viewBox="0 0 24 24" aria-label="GitHub logo"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.93.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.55 9.55 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></span><div><strong>GitHub</strong><p class="muted" id="github-progress">18 commits this week · 12 repositories</p><div class="skill-meter"><i style="width:78%"></i></div><small id="github-status">Demo data · sync pending</small></div></article>
+          <article class="skill-card"><span class="skill-badge orange"><svg viewBox="0 0 24 24" aria-label="LeetCode logo"><path d="M13.5 3.2 7.1 9.6a4.6 4.6 0 0 0 0 6.5l2.8 2.8a4.6 4.6 0 0 0 6.5 0l3-3M12 8l8 8M4 20h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><div><strong>LeetCode</strong><p class="muted" id="leetcode-progress">146 problems solved · 18 day streak</p><div class="skill-meter"><i style="width:68%"></i></div><small id="leetcode-status">Demo data · sync pending</small></div></article>
+          <article class="skill-card"><span class="skill-badge blue"><svg viewBox="0 0 24 24" aria-label="Codeforces logo"><path d="M4 14h3v6H4zM10.5 9h3v11h-3zM17 4h3v16h-3z" fill="currentColor"/></svg></span><div><strong>Codeforces</strong><p class="muted" id="codeforces-progress">1,248 current rating · 286 solved</p><div class="skill-meter"><i style="width:62%"></i></div><small id="codeforces-status">Demo data · sync pending</small></div></article>
+        </div>
+        <div class="activity-heatmap">
+          <div class="panel-heading"><div><h3>Coding activity heat map</h3><p class="muted">Live activity from your connected profiles · last 7 days</p></div><div><div class="heatmap-filters"><button class="heatmap-filter active" data-heat-source="all">All</button><button class="heatmap-filter" data-heat-source="github">GitHub</button><button class="heatmap-filter" data-heat-source="leetcode">LeetCode</button><button class="heatmap-filter" data-heat-source="codeforces">Codeforces</button></div><div class="heatmap-legend"><span>Less</span><i class="heat-0"></i><i class="heat-1"></i><i class="heat-2"></i><i class="heat-3"></i><span>More</span></div></div></div>
+          <div id="coding-heatmap" class="heatmap-grid"><p class="muted">Connect your profiles to load activity.</p></div>
+        </div>
+      </section>
+      <section class="panel jobs-view hidden" id="jobs-view">
+        <div class="panel-heading"><div><h2>Job recommendations</h2><p class="muted">Resume-matched internships and jobs from Internshala and Unstop</p></div><button class="select" id="jobs-back-overview">← Overview</button></div>
+        <div class="dashboard-job-filters"><select id="page-job-location-filter"><option value="all">All locations</option><option value="remote">Work from home</option><option value="bengaluru">Bengaluru</option><option value="hyderabad">Hyderabad</option><option value="pune">Pune</option></select><select id="page-job-mode-filter"><option value="all">All work modes</option><option value="remote">Work from home</option><option value="onsite">On-site</option></select><select id="page-job-paid-filter"><option value="all">All compensation</option><option value="paid">Paid only</option><option value="unpaid">Unpaid / unknown</option></select></div>
+        <div id="jobs-page-list" class="job-list"></div>
+      </section>
+      <section class="panel applications-view hidden" id="applications-view">
+        <div class="panel-heading"><div><h2>Applications</h2><p class="muted">Track every job and internship from application to offer</p></div><button class="select" id="applications-back-overview">← Overview</button></div>
+        <div class="application-stats"><div><strong id="application-total">0</strong><small>Total</small></div><div><strong id="application-active">0</strong><small>Active</small></div><div><strong id="application-interviews">0</strong><small>Interviews</small></div><div><strong id="application-offers">0</strong><small>Offers</small></div></div>
+        <form id="application-form" class="application-form"><input name="role" required placeholder="Role or internship title"><input name="company" required placeholder="Company"><select name="status"><option>Saved</option><option>Applied</option><option>Shortlisted</option><option>Interview</option><option>Offer</option><option>Rejected</option></select><input name="deadline" type="date"><input name="note" placeholder="Note or next step"><button class="primary" type="submit">Add application</button></form>
+        <div id="application-list" class="application-list"></div>
+      </section>
+    </main>
+  </div>
+  <div id="action-dialog" class="action-dialog hidden" role="dialog" aria-live="polite"><div class="action-card"><button id="close-dialog" class="close-dialog">×</button><h2 id="dialog-title"></h2><p id="dialog-message" class="muted"></p><input id="dialog-search" class="dialog-search hidden" type="search" placeholder="Search jobs, applications, goals..."><div id="resume-upload" class="resume-upload hidden"><label class="upload-label">Upload resume PDF<input id="resume-file" type="file" accept="application/pdf,.pdf"></label><p id="resume-status" class="muted">Your PDF is analyzed locally in this browser.</p><button id="resume-submit" class="primary" type="button">Submit for ATS review</button></div><div id="job-filters" class="job-filters hidden"><select id="job-location-filter"><option value="all">All locations</option><option value="remote">Work from home</option><option value="bengaluru">Bengaluru</option><option value="hyderabad">Hyderabad</option><option value="pune">Pune</option></select><select id="job-mode-filter"><option value="all">All work modes</option><option value="remote">Work from home</option><option value="onsite">On-site</option></select><select id="job-paid-filter"><option value="all">All compensation</option><option value="paid">Paid only</option><option value="unpaid">Unpaid / unknown</option></select></div><div id="dialog-results" class="hidden"></div><button id="dialog-action" class="primary">Got it</button></div></div>
+  <div id="login" class="login-overlay hidden">
+    <form class="login-card" id="login-form"><div class="brand"><span class="brand-mark">C2</span><span>Code2Career</span></div><h2>Welcome back</h2><p class="muted">Sign in to view your progress dashboard.</p><label>Email<input name="email" type="email" required placeholder="you@example.com"></label><label>Password<input name="password" type="password" required placeholder="••••••••"></label><button class="primary full">Sign in</button><p id="login-error" class="error"></p></form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="app.js?v=20260920v"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+com\careeros\careeros\CareerOSApplicationTests.class
+com\careeros\careeros\service\AwsS3ServiceTest.class
+com\careeros\careeros\service\AwsSesServiceTest.class
