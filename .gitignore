@@ -1,0 +1,29 @@
+# Java / Maven
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+
+# Node
+frontend/node_modules/
+frontend/.cache/
+
+# Environment files
+.env
+.env.*
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.iml

@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = __dirname;
-const backend = 'http://localhost:8080';
+const backend = process.env.BACKEND_URL || 'http://localhost:8080';
 const codeforcesCache = new Map();
 const mime = {
   '.css': 'text/css; charset=utf-8',

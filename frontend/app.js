@@ -1,4 +1,4 @@
-const API = '';
+const API = window.__APP_API__ || '';
 const $ = (id) => document.getElementById(id);
 const token = () => localStorage.getItem('careeros_token');
 const dialog = (title, message, action = 'Got it') => {
