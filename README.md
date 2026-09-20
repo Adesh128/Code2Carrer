@@ -2,6 +2,10 @@
 
 A student-focused career growth dashboard that helps learners track coding progress, view resume readiness, monitor applications, and receive reminders for career milestones.
 
+## Screenshot
+
+![Code2Career dashboard screenshot](docs/project-screenshot.svg)
+
 ## Overview
 
 Code2Career combines coding activity, job preparation, and personal progress tracking into a single dashboard. Students can:
